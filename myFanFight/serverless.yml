@@ -1,0 +1,11 @@
+service: myfirstserverlessapp
+provider:
+  name: aws
+  runtime: nodejs14.x
+functions:
+  getFanfightBalanceAfterJoiningContest:
+    handler: index.getFanfightBalanceAfterJoiningContest
+    events:
+      - http:
+          path: getFanfightBalanceAfterJoiningContest
+          method: get
